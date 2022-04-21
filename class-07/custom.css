@@ -1,0 +1,17 @@
+img{
+    border-radius: 50px;
+}
+.container-fluid{
+    background-image: linear-gradient(to right, rgb(12, 136, 213) , yellow);
+}
+.bg{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+nav.nav .nav-link {
+    margin-left: 20px;
+    border: 1px solid;
+    color: black;
+    border-radius: 28px;
+}
