@@ -96,9 +96,10 @@
             ]
         ],
      ];
+     $question_shuffle = shuffle ($questionSet);
 
      foreach($questionSet as $key1 => $questions){
-    
+        
     ?>
 <h6 class="ms-5 mt-5"> Q<?php echo ++$key1. ') ' . $questions ['question']; ?> </h6>
 

@@ -28,9 +28,10 @@ $questionSet =[
    ],
 ];
 
-
+$questionSets = shuffle ($questionSet);
 ?>
 <?php 
+
 foreach($questionSet as $key => $question){
 
 
@@ -41,11 +42,24 @@ foreach($question ['options'] as $key1 => $mcq){
 
 
 ?>
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-  <label class="form-check-label" for="flexRadioDefault1">
-    <?php echo $mcq ?>
+<div class         = "form-check">
+      <input class = "form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <label class     = "form-check-label" for="flexRadioDefault1">
+        <?php echo $mcq ?>
   </label>
 </div>
 <?php } ?>
 <?php } ?>
+
+
+<?php
+
+
+// $array = ['Md.', 'Rafikul', 'Islam'];
+
+// var_dump(implode("~", $array));
+
+
+
+
+?>
