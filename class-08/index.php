@@ -76,28 +76,55 @@ echo gpa();
 //Create a BMI function for health
 echo "<h3>Question 05</h3>";
 
-function bmis($weight_kg, $height){
-    $bmi = $weight_kg / ($height * $height);
-    $bmi =  number_format($bmi, 2);
+// function bmis($weight_kg, $height){
+//     $bmi = $weight_kg / ($height * $height);
+//     $bmi =  number_format($bmi, 2);
 
-    if($bmi < 18.5){
-        return "Yout BMI Thin {$bmi}";
-    }elseif($bmi >= 18.5 && $bmi <= 24.9){
-        return "Yout BMI Normal {$bmi}";
-    }elseif($bmi >= 25 && $bmi <= 29.9){
-        return "Yout BMI Overweight {$bmi}";
-    }elseif($bmi >= 30 && $bmi <= 34.9){
-        return "Yout BMI Obesity {$bmi}";
-    }elseif($bmi >= 35 && $bmi <= 39.9){
-        return "Yout BMI Obesity (Hight / Stepi) {$bmi}";
-    }elseif($bmi > 40){
-        return "Yout BMI Obesity Overhight (Hight / Stepi) {$bmi}";
+//     if($bmi < 18.5){
+//         return "Yout BMI Thin {$bmi}";
+//     }elseif($bmi >= 18.5 && $bmi <= 24.9){
+//         return "Yout BMI Normal {$bmi}";
+//     }elseif($bmi >= 25 && $bmi <= 29.9){
+//         return "Yout BMI Overweight {$bmi}";
+//     }elseif($bmi >= 30 && $bmi <= 34.9){
+//         return "Yout BMI Obesity {$bmi}";
+//     }elseif($bmi >= 35 && $bmi <= 39.9){
+//         return "Yout BMI Obesity (Hight / Stepi) {$bmi}";
+//     }elseif($bmi > 40){
+//         return "Yout BMI Obesity Overhight (Hight / Stepi) {$bmi}";
+//     }
+// }
+
+// echo bmis(60, 1.58496); //5.2 Feed/Ince = 1.58496
+
+//==================================
+function bmis($weight_kg, $height){
+    $new_hight = explode(".", $height);
+    $new_array = reset($new_hight);
+    $end_array = end($new_hight);
+
+    $feed_ince = ($new_array * 12)+$end_array;
+    $feed_ince = $feed_ince * 0.0254;
+
+    $bmis = $weight_kg/($feed_ince*$feed_ince);
+    $bmis = number_format($bmis,2);
+
+    if($bmis < 18.5){
+        return "Yout BMI Thin {$bmis}";
+    }elseif($bmis >= 18.5 && $bmis <= 24.9){
+        return "Yout BMI Normal {$bmis}";
+    }elseif($bmis >= 25 && $bmis <= 29.9){
+        return "Yout BMI Overweight {$bmis}";
+    }elseif($bmis >= 30 && $bmis <= 34.9){
+        return "Yout BMI Obesity {$bmis}";
+    }elseif($bmis >= 35 && $bmis <= 39.9){
+        return "Yout BMI Obesity (Hight / Stepi) {$bmis}";
+    }elseif($bmis > 40){
+        return "Yout BMI Obesity Overhight (Hight / Stepi) {$bmis}";
     }
 }
 
-echo bmis(180, 5.2);
-
-
+echo bmis(50, 6.5);
 
 
 
