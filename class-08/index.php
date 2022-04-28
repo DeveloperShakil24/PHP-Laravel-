@@ -72,11 +72,22 @@ function gpa($number = 50){
     }
 }
 echo gpa();
+
+//============================
+//Create an age calculator function
+echo "<h3>Question 04</h3>";
+
+$birth = "17-10-2000";
+$current = date("d-m-Y");
+$age = date_diff(date_create($birth), date_create($current));
+echo "Current age is ".$age->format("%y");
+
 //============================
 //Create a BMI function for health
 echo "<h3>Question 05</h3>";
 
-// function bmis($weight_kg, $height){
+// function bmiss($weight_kg, $height){
+//     $height /= 100;
 //     $bmi = $weight_kg / ($height * $height);
 //     $bmi =  number_format($bmi, 2);
 
@@ -95,8 +106,8 @@ echo "<h3>Question 05</h3>";
 //     }
 // }
 
-// echo bmis(60, 1.58496); //5.2 Feed/Ince = 1.58496
-
+// echo bmiss(60, 8.4);
+// echo "<br>";
 //==================================
 function bmis($weight_kg, $height){
     $new_hight = explode(".", $height);
@@ -126,30 +137,6 @@ function bmis($weight_kg, $height){
 
 echo bmis(50, 6.5);
 
-
-
-
-
-
-
-
-
-
-
-//============================
-//Create an age calculator function
-echo "<h3>Question 04</h3>";
-
-$birth = "17-10-2000";
-$current = date("d-m-Y");
-$age = date_diff(date_create($birth), date_create($current));
-echo "Current age is ".$age->format("%y");
-//========================================
-//Create a BMI function for health
-echo "<h3>Question 05</h3>";
-function bmi($Age, $Height, $Weight){
-    
-}
 //===================================================
 //Create a currency converter function from taka to USD, CAD, POUND, EURO etc
 echo "<h3>Question 06</h3>";
