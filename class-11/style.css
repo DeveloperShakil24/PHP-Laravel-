@@ -1,0 +1,6 @@
+.foucas:focus{
+    box-shadow: none;
+}
+.test_color{
+    background-image: linear-gradient(to right, rgb(237, 21, 21),orange,rgb(186, 186, 28),green,rgb(22, 22, 219),rgb(108, 39, 158),rgb(124, 37, 124));
+}
