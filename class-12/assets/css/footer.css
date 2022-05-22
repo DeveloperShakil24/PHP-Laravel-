@@ -1,0 +1,19 @@
+.footer_section{
+    background-color: #26aba3;
+    border-bottom: 1px solid white;
+}
+.footer_icon {
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+}
+.footer_menu{
+    padding-top: 50px;
+}
+.footer_menu a {
+    color: white;
+    padding: 10px;
+}
+.footer_menu a:hover{
+    color: black;
+}
